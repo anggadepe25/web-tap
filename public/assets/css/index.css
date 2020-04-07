@@ -1,0 +1,354 @@
+.icon_left{
+    text-align: center;
+    background: -webkit-gradient(linear,left top,right top,from(#A34FFE),to(#5934FC));
+    background: -webkit-linear-gradient(left,#A34FFE,#5934FC);
+    background: -moz-linear-gradient(left,#A34FFE,#5934FC);
+    background: -o-linear-gradient(left,#A34FFE,#5934FC);
+    background: linear-gradient(to right,#A34FFE,#5934FC);
+    color: #fff;
+    border-radius: 50%;
+    height: 51px;
+    width: 51px;
+    line-height: 51px;
+}
+.icon_left i{
+	line-height: 50px;
+}
+.bg_homebefore{
+	position: relative;
+}
+.bg_homebefore:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height:199px;
+background: -webkit-linear-gradient(left,#A34FFE,#5934FC);
+    background: -moz-linear-gradient(left,#A34FFE,#5934FC);
+    background: -o-linear-gradient(left,#A34FFE,#5934FC);
+    background: linear-gradient(to right,#9048fe,#6338fd);
+}
+.heading_home h2{
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.heading_home p{
+	color: #fff;
+}
+.state-view{
+	margin: 0px;
+	font-weight: bold;
+}
+.height_samegraph{
+	height:260px !important;
+}
+.height_canvas{
+	height: 250px !important;
+}
+.color_prple{
+	color: #716aca;
+}
+.color_yellow{
+	color: #ffd256;
+}
+.link_viewall a{
+    color:#954afe;
+    background-color: transparent;
+    border: 1px solid #954afe;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: .813rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.link_viewall a:hover{
+	    color: #fff;
+    background-color: #954afe;
+    border-color: #954afe;
+}
+
+
+
+.chat_box{
+	    height:320px;
+    overflow: hidden;
+}
+.chat_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #dedede;
+   }
+.left_align_me{
+	overflow: hidden;
+}
+.left_align_me img{
+	float: left;
+	    height: 40px;
+    width: 40px;
+}
+.left_align_me .chat-info {
+    float: left;
+    background: #f7f7f7;
+        width: calc(100% - 60px);
+    border-radius: 8px;
+    padding:15px;
+    position: relative;
+        margin-left: 20px;
+}
+.left_align_me .chat-info:before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f7f7f7;
+    left: -10px;
+    top: 12px;
+        width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 12px;
+}
+.left_align_me .message, .right_align_me .message{
+	margin: 0px;
+	font-size: 14px;
+}
+.right_align_me .message{
+	color: #fff;
+}
+.right_align_me img{
+	float: right;
+}
+.right_align_me{
+	margin: 15px 0px;
+}
+.right_align_me .chat-info{
+    background: -webkit-gradient(linear,left top,right top,from(#A34FFE),to(#5934FC));
+    background: -webkit-linear-gradient(left,#A34FFE,#5934FC);
+    background: -moz-linear-gradient(left,#A34FFE,#5934FC);
+    background: -o-linear-gradient(left,#A34FFE,#5934FC);
+    background: linear-gradient(to right,#A34FFE,#5934FC);
+    color: #fff;
+        text-align: right;
+            margin-right: 20px;
+                width: calc(100% - 60px);
+    border-radius: 8px;
+    padding:15px;
+    position: relative;
+}
+.right_align_me .chat-info:before {
+       border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+        border-left: 10px solid #5b35fc;
+    right: -10px;
+    top: 12px;
+        width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 12px;
+}
+
+.profile_wid_user{
+	text-align: center;
+}
+.profile-widget-head {
+    background-image: url(../images/carousal-bg.jpg);
+    background-size: cover;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    float: left;
+    padding: 30px 0 55px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 50px;
+}
+.profile-widget-head:before {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    color: #fff;
+        background: -webkit-gradient(linear,left top,right top,from(#A34FFE),to(#5934FC));
+    background: -webkit-linear-gradient(left,#A34FFE,#5934FC);
+    background: -moz-linear-gradient(left,#A34FFE,#5934FC);
+    background: -o-linear-gradient(left,#A34FFE,#5934FC);
+    background: linear-gradient(to right,#A34FFE,#5934FC);
+}
+.profile-widget-head > h3 {
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+}
+.profile-widget-head > i {
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    margin-top: 6px;
+}
+.profile-widget-head > span {
+    border: 3px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: -35px;
+    margin-left: -40px;
+    overflow: hidden;
+    position: absolute;
+}
+.profile-widget-head > span > img {
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+.profile_wid_user > h4 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin: 0 0 15px;
+}
+   .profile_wid_user > span {
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+    border-radius: 21px;
+    color: #fff;
+    display: table;
+    margin: 0 auto;
+    padding: 7px 16px;
+       background: -webkit-gradient(linear,left top,right top,from(#A34FFE),to(#5934FC));
+    background: -webkit-linear-gradient(left,#A34FFE,#5934FC);
+    background: -moz-linear-gradient(left,#A34FFE,#5934FC);
+    background: -o-linear-gradient(left,#A34FFE,#5934FC);
+    background: linear-gradient(to right,#A34FFE,#5934FC);
+}
+.profile_wid_user > span > i {
+    margin-right: 7px;
+}
+.profile_wid_user > p {
+    margin-top: 15px;
+    padding: 0 22px;
+    text-align: center;
+}.profile_wid_user > p {
+    margin-top: 15px;
+    padding: 0 22px;
+        margin-bottom: 9px;
+    text-align: center;
+}
+.profile_wid_user > a {
+    color: #a5a5a5;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.social-btns {
+    float: right;
+    list-style: none outside none;
+    margin: -35px 0 0;
+    padding: 0;
+}
+.social-btns > li {
+    float: right;
+    list-style: none outside none;
+    margin-left: 6px;
+}
+.social-btns > li > a {
+    float: left;
+}
+.profile_wid_user > .social-btns {
+    display: table;
+    float: none;
+    margin: 0 auto 25px;
+}
+
+.social-btns > li > a > i {
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 31px;
+}
+.social-btns > li > a > i.fa-facebook {
+    background: #3b5998;
+}
+.social-btns > li > a > i.fa-google-plus {
+    background: #dd4b39;
+}
+.social-btns > li > a > i.fa-twitter {
+    background: #439ed6;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.chart_section .card-group .card{
+		    width: 50%;
+    flex: 0 0 50% !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.chart_section .card-group .card{
+		    width: 50%;
+    flex: 0 0 50% !important;
+	}
+}
+@media (max-width:767px){
+	.chart_section .card-group{
+        flex-flow: column;
+}
+.chart_section .card-group>.card {
+    margin-bottom: 15px;
+}
+}
+#area-chart svg{
+  
+}

@@ -1,0 +1,77 @@
+.side_bar:before{
+      background: #1d2126;
+}
+.sidebar-menu li a{
+  color: rgba(255, 255, 255, 0.62);
+}
+.bg_homebefore:before{
+  display: none;
+}
+.user-panel{
+  background: #1b1f24;
+}
+.main-header,.logo{
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+}
+.logo{
+  border: none;
+}
+.heading_home h2,
+.heading_home p,
+.dropdown-notification .dropdown-toggle i,
+.dropdown-inbox .dropdown-toggle i,
+.user-panel > .info > p,
+.user-panel > .info > a{
+    color: #53505f;
+}
+.user-panel > .user_image > img{
+  border: 1px solid #1d2126;
+box-shadow: 0 2px 40px -5px #0c0f13;
+}
+.sidebar-menu li a:hover {
+    background: #1b1f24;
+    border-left: 3px solid #fff;
+}
+.sidebar-menu li a:hover i {
+    color: #fff;
+}
+.sidebar-menu li a:hover {
+    background: #1b1f24;
+    border-left: 3px solid #fff;
+}
+.badge_coun{
+      background-color: #2979ff;
+}
+.menu-toggler{
+  border-color: #53505f;
+}
+.menu-toggler:before{
+  background:#53505f;
+}
+.search .search-form .form-control,.search .search-form .btn{
+color: #53505f;
+}
+.search .search-form .form-control{
+      background: #f6f6f6;
+}
+.main-header ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #53505f !important;
+  opacity: 1; /* Firefox */
+}
+
+.main-header :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #53505f !important;
+}
+
+
+.main-header ::-ms-input-placeholder { /* Microsoft Edge */
+color: #53505f !important;
+}
+.icon_left{
+	background: none;
+      border: 1px solid rgba(0, 0, 0, 0.15)
+}
+.side_bar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: rgba(158, 158, 158, 0.4);
+}
