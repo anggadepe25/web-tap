@@ -55,7 +55,6 @@ class Handler extends ExceptionHandler
         return parent::render($request, $exception);
     }
 
-
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if ($request->expectsJson()){
@@ -63,15 +62,15 @@ class Handler extends ExceptionHandler
         }
 
         $guard = Arr::get($exception->guards(), 0);
-        switch ($guard){
 
+        switch ($guard){
             case 'admin':
                 $login = 'admin.login';
                 break;
 
-            default :
-                $login = 'login';
-                break;
+//            /*default :
+//                $login = 'login';
+//                break;*/
         }
         return redirect()->guest(route($login));
 

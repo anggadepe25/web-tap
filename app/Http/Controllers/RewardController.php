@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Panduan;
-use Illuminate\Http\Request;use Illuminate\Support\Facades\App;
+use App\Reward;
+use Illuminate\Http\Request;
 
-class PanduanController extends Controller
+class RewardController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function __construct()
     {
         $this->middleware('auth:admin');
@@ -20,8 +19,8 @@ class PanduanController extends Controller
 
     public function index()
     {
-        $datas = Panduan::all();
-        return view('pages.panduan.panduan', compact('datas'));
+        $datas = Reward::all();
+        return view('pages.reward.reward', compact('datas'));
     }
 
     /**
@@ -31,7 +30,7 @@ class PanduanController extends Controller
      */
     public function create()
     {
-        //
+        //return view('pages.reward.create');
     }
 
     /**
@@ -42,18 +41,19 @@ class PanduanController extends Controller
      */
     public function store(Request $request)
     {
-
-        $this->validate($request, [
+        //Validasi
+        $this->validate($request,[
             'judul' =>'required',
-            'deskripsi' =>'required',
+            'keterangan' =>'required',
         ]);
 
-        $data = new Panduan();
+        //Menambah Data
+        $data = new Reward();
         $data->judul = $request->judul;
-        $data->deskripsi = $request->deskripsi;
+        $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect()->route('panduan');
+        return redirect()->route('reward');
     }
 
     /**
@@ -75,7 +75,8 @@ class PanduanController extends Controller
      */
     public function edit($id)
     {
-        //
+//        $data=Reward::find($id);
+//        return view('pages.Reward.Reward',compact('data'));
     }
 
     /**
@@ -87,18 +88,12 @@ class PanduanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'judul' =>'required',
-            'deskripsi' =>'required',
-        ]);
-
-        $data = Panduan::find($id);
+        $data = Reward::find($id);
         $data->judul = $request->judul;
-        $data->deskripsi = $request->deskripsi;
-
+        $data->keterangan = $request->keterangan;
 
         $data->update();
-        return redirect()->route('panduan')->with('update','Berhasil Mengubah Data');
+        return redirect()->route('reward')->with('update','Berhasil Mengubah Data');
     }
 
     /**
@@ -109,8 +104,8 @@ class PanduanController extends Controller
      */
     public function destroy($id)
     {
-        $data = Panduans::find($id);
+        $data = Reward::find($id);
         $data->delete();
-        return redirect()->route('panduan')->with('delete','Berhasil Menghapus Data');
+        return redirect()->route('reward')->with('delete','Berhasil Menghapus Data');
     }
 }

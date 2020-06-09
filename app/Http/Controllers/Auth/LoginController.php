@@ -12,7 +12,7 @@ class LoginController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
     }
 
     public function showFormLogin(){
@@ -23,7 +23,7 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             'email' => 'required|string',
-            'password' => 'required|string|min:6'
+            'password' => 'required|string|min:5'
         ]);
 
         $credential = [

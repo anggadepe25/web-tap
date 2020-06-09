@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class akun extends Model
+class Program extends Model
 {
-    //
+    protected $guarded=[];
 }

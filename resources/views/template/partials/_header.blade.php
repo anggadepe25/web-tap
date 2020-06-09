@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo d-flex align-items-center">
-                        <a href="#"> <strong class="logo_icon"> <img src="assets/images/small-logo.png" alt=""> </strong> <span class="logo-default"> <img src="assets/images/logo.png" alt=""> </span> </a>
+                        <a href="#"> <strong class="logo_icon"> <img src="{{asset('assets/images/small-logo.png')}}" alt=""> </strong> <span class="logo-default"> <img src="{{asset('assets/images/logo.png')}}" alt=""> </span> </a>
                         <div class="icon_menu">
                             <a href="#" class="menu-toggler sidebar-toggler"></a>
                         </div>
@@ -24,22 +24,22 @@
                             <div class="col-xl-12 col-12 d-flex justify-content-end">
                                 <div class="right_bar_top d-flex align-items-center">
                                     <div class="search">
-                                        <div class="d-lg-none">
-                                            <a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view collapsed" href="javascript:void(0);" aria-expanded="false"> <i class=" icon-magnifier"></i> </a>
-                                            <form id="search_form" role="search" class="search-form collapse" action="#">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search...">
-                                                    <button type="button" class="btn" data-target="#search_form" data-toggle="collapse" aria-label="Close">
-                                                        <i class="ion-android-search"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-
+                                        {{--<div class="d-lg-none">--}}
+                                            {{--<a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view collapsed" href="javascript:void(0);" aria-expanded="false"> <i class=" icon-magnifier"></i> </a>--}}
+                                            {{--<form id="search_form" role="search" class="search-form collapse" action="#">--}}
+                                                {{--<div class="input-group">--}}
+                                                    {{--<input type="text" class="form-control" placeholder="Search...">--}}
+                                                    {{--<button type="button" class="btn" data-target="#search_form" data-toggle="collapse" aria-label="Close">--}}
+                                                        {{--<i class="ion-android-search"></i>--}}
+                                                    {{--</button>--}}
+                                                {{--</div>--}}
+                                            {{--</form>--}}
+                                        {{--</div>--}}
+                                        {{--Serach--}}
                                         <div class="d-lg-block d-xs-none">
                                             <form role="search" class="search-form form_show" action="#">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search...">
+                                                    <input type="text" class="form-control" placeholder="Cari">
                                                     <button type="button" class="btn" data-target="#" data-toggle="" aria-label="Close">
                                                         <i class="ion-android-search"></i>
                                                     </button>
@@ -83,47 +83,47 @@
                                     <!-- notification_End -->
 
                                     <!-- DropDown_Inbox -->
-                                    <div class="dropdown dropdown-inbox">
-                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="fa fa-envelope-o"></i> <span class="badge_coun"> 2 </span> </a>
-                                        <ul class="dropdown-menu scroll_auto height_fixed">
-                                            <li class="bigger">
-                                                <h3><span class="bold">Messages</span></h3>
-                                                <span class="notification-label">New 2</span>
-                                            </li>
-                                            <li>
-                                                <ul class="dropdown-menu-list">
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    {{--<div class="dropdown dropdown-inbox">--}}
+                                        {{--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="fa fa-envelope-o"></i> <span class="badge_coun"> 2 </span> </a>--}}
+                                        {{--<ul class="dropdown-menu scroll_auto height_fixed">--}}
+                                            {{--<li class="bigger">--}}
+                                                {{--<h3><span class="bold">Messages</span></h3>--}}
+                                                {{--<span class="notification-label">New 2</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<ul class="dropdown-menu-list">--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                    {{--<li>--}}
+                                                        {{--<a href="#"> <span class="photo"> <img src="assets/images/about-1.jpg" class="img-circle" alt=""> </span> <span class="subject"> <span class="from"> Sarah Smith </span> <span class="time">Just Now </span> </span> <span class="message"> Jatin I found you on LinkedIn... </span> </a>--}}
+                                                    {{--</li>--}}
+                                                {{--</ul>--}}
+                                            {{--</li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
                                     <!--DropDown_Inbox_End -->
 
                                     <!-- Dropdown_User -->
                                     <div class="dropdown dropdown-user">
-                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true"> <img class="img-circle pro_pic" src="assets/images/user3.png" alt=""> </a>
+                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true"> <img class="img-circle pro_pic" src="{{asset('assets/images/user3.png')}}" alt=""> </a>
                                         <ul class="dropdown-menu dropdown-menu-default">
                                             <li>
                                                 <div class="user-panel">
                                                     <div class="user_image">
-                                                        <img src="assets/images/user3.png" class="img-circle mCS_img_loaded" alt="User Image">
+                                                        <img src="{{asset('assets/images/user3.png')}}" class="img-circle mCS_img_loaded" alt="User Image">
                                                     </div>
                                                     <div class="info">
                                                         <p>

@@ -34,7 +34,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //return view('pages.news.create');
+        return view('pages.news.create');
     }
 
     /**
@@ -106,11 +106,13 @@ class NewsController extends Controller
         $data->deskripsi = $request->deskripsi;
 
         if ($image==''){
-            $data->gambar=$request->old_gambar;
+            $data->gambar = $request->old_gambar;
         }else{
             $filename=time().'.'.$image->getClientOriginalExtension();
             $path=public_path('uploads/admin');
             $image->move($path,$filename);
+
+            $data->gambar = $filename;
         }
 
         $data->update();
