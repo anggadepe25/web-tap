@@ -15,14 +15,14 @@
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-group has-success">
-                                    <label>Judul</label>
+                                    <label>Prograrm</label>
                                     <input type="text"
-                                           class="form-control {{$errors->has('judul')?'is-invalid':''}}"
-                                           name="judul" value="{{old('judul')}}"
+                                           class="form-control {{$errors->has('program')?'is-invalid':''}}"
+                                           name="program" value="{{old('program')}}"
                                            placeholder=" ">
-                                    @if ($errors->has('judul'))
+                                    @if ($errors->has('program'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('judul')}}</b></p>
+                                            <p><b>{{$errors->first('program')}}</b></p>
                                         </span>
                                     @endif
                                 </div>
@@ -32,7 +32,10 @@
                                     <input type="file"
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
                                            name="gambar" value="{{old('gambar')}}"
-                                           placeholder=" ">
+                                           onchange="loadfile(event)" id="foto">
+                                    <br/>
+                                    <img id="output" class="img-fluid" height="100" width="100"
+                                         style="display: none">
                                     @if ($errors->has('gambar'))
                                         <span class="invalid-feedback" role="alert">
                                             <p><b>{{$errors->first('gambar')}}</b></p>
@@ -81,5 +84,16 @@
         </div>
         <!-- state end-->
     </div>
+
+    <script>
+        var loadfile = function (event) {
+            var foto = document.getElementById('foto');
+            var output = document.getElementById('output');
+            if (foto && foto.value) {
+                output.src = URL.createObjectURL(event.target.files[0]);
+                output.style.display = '';
+            }
+        };
+    </script>
 
 @endsection

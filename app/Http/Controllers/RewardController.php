@@ -30,7 +30,7 @@ class RewardController extends Controller
      */
     public function create()
     {
-        //return view('pages.reward.create');
+        return view('pages.reward.create');
     }
 
     /**
@@ -75,8 +75,8 @@ class RewardController extends Controller
      */
     public function edit($id)
     {
-//        $data=Reward::find($id);
-//        return view('pages.Reward.Reward',compact('data'));
+        $data=Reward::find($id);
+        return view('pages.reward.edit',compact('data'));
     }
 
     /**

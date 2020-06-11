@@ -45,7 +45,7 @@ class ProgramController extends Controller
     {
 
         $this->validate($request, [
-            'judul' =>'required',
+            'program' =>'required',
             'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048',
             'panduan' =>'required',
             'tanggal_mulai_pengumpulan' =>'required',
@@ -57,7 +57,7 @@ class ProgramController extends Controller
         $image->move($path, $filename);
 
         $data = new Program();
-        $data->judul = $request->judul;
+        $data->program = $request->program;
         $data->gambar = $filename;
         $data->panduan = $request->panduan;
         $data->tanggal_mulai_pengumpulan = $request->tanggal_mulai_pengumpulan;
@@ -100,7 +100,7 @@ class ProgramController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'judul' =>'required',
+            'program' =>'required',
             'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048',
             'panduan' =>'required',
             'tanggal_pengumpulan' =>'required',
@@ -108,7 +108,7 @@ class ProgramController extends Controller
 
 
         $data = Program::find($id);
-        $data->judul = $request->judul;
+        $data->program = $request->program;
         $data->panduan = $request->panduan;
         $data->tanggal_pengumpulan = $request->tanggal_pengumpulan;
         $image = $request->file('gambar');

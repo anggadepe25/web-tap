@@ -41,7 +41,7 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Judul</th>
+                                <th>Progam</th>
                                 <th>Gambar</th>
                                 <th>Panduan</th>
                                 <th>Tanggal Pengumpulan</th>
@@ -53,7 +53,7 @@
                             @foreach($datas as $data)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{$data->judul}}</td>
+                                    <td>{{$data->program}}</td>
                                     <td><img src="{{asset('uploads/admin/'.$data->gambar)}}" width="60" height="40">
                                     </td>
                                     <td>{{$data->panduan}}</td>

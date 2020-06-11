@@ -29,11 +29,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('news', 'NewsController@index')->name('news');
     Route::get('news/create', 'NewsController@create')->name('news.create');
     Route::post('news/store', 'NewsController@store')->name('news.store');
+    Route::get('news/edit/{id}', 'NewsController@edit')->name('news.edit');
     Route::patch('news/update/{id}', 'NewsController@update')->name('news.update');
     Route::get('news/destroy/{id}', 'NewsController@destroy')->name('news.destroy');
 
     Route::get('reward', 'RewardController@index')->name('reward');
+    Route::get('reward/create', 'RewardController@create')->name('reward.create');
     Route::post('reward/store', 'RewardController@store')->name('reward.store');
+    Route::get('reward/edit/{id}', 'RewardController@edit')->name('reward.edit');
     Route::patch('reward/update/{id}', 'RewardController@update')->name('reward.update');
     Route::get('reward/destroy/{id}', 'RewardController@destroy')->name('reward.destroy');
 
@@ -48,11 +51,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('challenge/konfirmasi/{id}', 'ChallengeController@konfirmasi')->name('challenge.konfirmasi');
     Route::get('challenge/tolak/{id}', 'ChallengeController@tolak')->name('challenge.tolak');
 
-    Route::get('user', 'AkunController@index')->name('user');
-    Route::get('user/create', 'AkunController@create')->name('user.create');
-    Route::post('user/store', 'AkunController@store')->name('user.store');
-    Route::patch('user/update/{id}', 'AkunController@update')->name('user.update');
-    Route::get('user/destroy/{id}', 'AkunController@destroy')->name('user.destroy');
+    Route::get('user', 'UserController@index')->name('user');
+    Route::get('user/create', 'UserController@create')->name('user.create');
+    Route::post('user/store', 'UserController@store')->name('user.store');
+    Route::get('user/destroy/{id}', 'UserController@destroy')->name('user.destroy');
 
 });
 

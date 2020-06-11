@@ -87,8 +87,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-//        $data=News::find($id);
-//        return view('pages.news.news',compact('data'));
+        $data = News::find($id);
+        return view('pages.news.edit', compact('data'));
     }
 
     /**
@@ -102,9 +102,8 @@ class NewsController extends Controller
     {
         $data = News::find($id);
         $data->judul = $request->judul;
-        $image=$request->file('gambar');
         $data->deskripsi = $request->deskripsi;
-
+        $image=$request->file('gambar');
         if ($image==''){
             $data->gambar = $request->old_gambar;
         }else{

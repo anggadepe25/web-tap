@@ -18,13 +18,13 @@
                             <div class="modal-body">
                                 {{--Judul--}}
                                 <div class="form-group has-info">
-                                    <label>Judul</label>
+                                    <label>Program</label>
                                     <input type="text"
-                                           class="form-control {{$errors->has('judul')?'is-invalid':''}}"
-                                           name="judul" value="{{$data->judul}}">
-                                    @if ($errors->has('judul'))
+                                           class="form-control {{$errors->has('program')?'is-invalid':''}}"
+                                           name="program" value="{{$data->program}}">
+                                    @if ($errors->has('program'))
                                         <span class="invalid-feedback" role="alert">
-                                                            <p><b>{{$errors->first('judul')}}</b></p>
+                                                            <p><b>{{$errors->first('program')}}</b></p>
                                                         </span>
                                     @endif
                                 </div>
@@ -33,11 +33,12 @@
                                     <label>Gambar</label>
                                     <input type="hidden" name="old_gambar" class="form-control"
                                            value="{{$data->gambar}}"/>
-                                    <input type="file" name="gambar" onchange="loadfile(event)" id="gambar"
+                                    <input type="file" name="gambar" onchange="loadfile(event)" id="foto"
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
                                            value="{{ old('gambar') }}"/>
                                     <img id="output" class="img-fluid" height="40" width="60"
                                          src="{{asset('uploads/admin/'.$data->gambar)}}">
+
                                     @if ($errors->has('gambar'))
                                         <span class="invalid-feedback" role="alert">
                                                             <p><b>{{$errors->first('gambar')}}</b></p>
@@ -88,5 +89,16 @@
         </div>
         <!-- state end-->
     </div>
+
+    <script>
+        var loadfile = function (event) {
+            var foto = document.getElementById('foto');
+            var output = document.getElementById('output');
+            if (foto && foto.value) {
+                output.src = URL.createObjectURL(event.target.files[0]);
+                output.style.display = '';
+            }
+        };
+    </script>
 
 @endsection

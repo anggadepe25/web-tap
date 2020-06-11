@@ -66,9 +66,11 @@
                                     </td>
                                     <td>{{$data->deskripsi}}</td>
                                     <td>
-                                        <button  class="btn btn-warning" data-toggle="modal" data-target="#edit{{$data->id}}">
+                                        <a href="{{route('news.edit', $data->id)}}">
+                                            <button class="btn btn-warning" >
                                                 <i class="fa fa-pencil"></i>
-                                        </button>
+                                            </button>
+                                        </a>
                                         <a href="{{route('news.destroy', $data->id)}}">
                                             <button class="btn btn-danger "
                                                     onclick="return confirm('Apakah Anda Yakin Akan Mengapus Data Ini')">

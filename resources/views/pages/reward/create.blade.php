@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form class="row" action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
+                        <form class="row" action="{{ route('reward.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-group has-info">
@@ -27,31 +27,15 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group has-success">
-                                    <label>Gambar</label>
-                                    <input type="file"
-                                           class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
-                                           name="gambar" value="{{old('gambar')}}"
-                                           onchange="loadfile(event)" id="foto">
-                                    <br/>
-                                    <img id="output" class="img-fluid" height="100" width="100"
-                                         style="display: none">
-                                    @if ($errors->has('gambar'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('gambar')}}</b></p>
-                                        </span>
-                                    @endif
-                                </div>
-
                                 <div class="form-group has-warning">
-                                    <label>Deskripsi</label>
+                                    <label>Keterangan</label>
                                     <textarea type="textarea"
-                                              class="form-control {{$errors->has('deskripsi')?'is-invalid':''}}"
-                                              name="deskripsi" value="{{old('gambar')}}"
+                                              class="form-control {{$errors->has('keterangan')?'is-invalid':''}}"
+                                              name="keterangan" value="{{old('keterangan')}}"
                                               placeholder=" "></textarea>
-                                    @if ($errors->has('deskripsi'))
+                                    @if ($errors->has('keterangan'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('deskripsi')}}</b></p>
+                                            <p><b>{{$errors->first('keterangan')}}</b></p>
                                         </span>
                                     @endif
                                 </div>
@@ -70,16 +54,5 @@
         </div>
         <!-- state end-->
     </div>
-
-    <script>
-        var loadfile = function (event) {
-            var foto = document.getElementById('foto');
-            var output = document.getElementById('output');
-            if (foto && foto.value) {
-                output.src = URL.createObjectURL(event.target.files[0]);
-                output.style.display = '';
-            }
-        };
-    </script>
 
 @endsection

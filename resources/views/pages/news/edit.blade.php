@@ -11,61 +11,71 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form class="row" action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('news.update', $data->id)}}"
+                              enctype="multipart/form-data">
                             @csrf
-                            <div class="col-sm-12">
+                            {{method_field('PATCH')}}
+                            <div class="modal-body">
+                                {{--Judul--}}
                                 <div class="form-group has-info">
                                     <label>Judul</label>
                                     <input type="text"
                                            class="form-control {{$errors->has('judul')?'is-invalid':''}}"
-                                           name="judul" value="{{old('judul')}}"
-                                           placeholder=" ">
+                                           name="judul" value="{{$data->judul}}">
                                     @if ($errors->has('judul'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('judul')}}</b></p>
-                                        </span>
+                                                            <p><b>{{$errors->first('judul')}}</b></p>
+                                                        </span>
                                     @endif
                                 </div>
 
                                 <div class="form-group has-success">
                                     <label>Gambar</label>
-                                    <input type="file"
+                                    <input type="hidden" name="old_gambar" class="form-control"
+                                           value="{{$data->gambar}}"/>
+                                    <input type="file" name="gambar" onchange="loadfile(event)" id="foto"
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
-                                           name="gambar" value="{{old('gambar')}}"
-                                           onchange="loadfile(event)" id="foto">
+                                           value="{{ old('gambar') }}" />
+                                    <img id="output" class="img-fluid" height="40" width="60"
+                                         src="{{asset('uploads/admin/'.$data->gambar)}}">
                                     <br/>
-                                    <img id="output" class="img-fluid" height="100" width="100"
-                                         style="display: none">
+
                                     @if ($errors->has('gambar'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('gambar')}}</b></p>
-                                        </span>
+                                                            <p><b>{{$errors->first('gambar')}}</b></p>
+                                                        </span>
                                     @endif
                                 </div>
 
-                                <div class="form-group has-warning">
+                                {{--Deskripsi--}}
+                                <div class="form-group has-info">
                                     <label>Deskripsi</label>
-                                    <textarea type="textarea"
-                                              class="form-control {{$errors->has('deskripsi')?'is-invalid':''}}"
-                                              name="deskripsi" value="{{old('gambar')}}"
-                                              placeholder=" "></textarea>
+                                    <textarea type="textarea" name="deskripsi"
+                                              class="form-control {{$errors->has('deskripsi')?'is-invalid':''}}">{{$data->deskripsi}}</textarea>
                                     @if ($errors->has('deskripsi'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('deskripsi')}}</b></p>
-                                        </span>
+                                                            <p><b>{{$errors->first('deskripsi')}}</b></p>
+                                                        </span>
                                     @endif
                                 </div>
 
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-secondary"
+                                        data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
 
-                            <div class="form-group ml-3">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
                         </form>
                     </div>
                 </div>
 
             </div>
+
 
         </div>
         <!-- state end-->
