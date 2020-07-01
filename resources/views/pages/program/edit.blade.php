@@ -17,15 +17,15 @@
                             {{method_field('PATCH')}}
                             <div class="modal-body">
                                 {{--Judul--}}
-                                <div class="form-group has-info">
-                                    <label>Program</label>
+                                <div class="form-group has-success">
+                                    <label>Judul</label>
                                     <input type="text"
-                                           class="form-control {{$errors->has('program')?'is-invalid':''}}"
-                                           name="program" value="{{$data->program}}">
-                                    @if ($errors->has('program'))
+                                           class="form-control {{$errors->has('judul')?'is-invalid':''}}"
+                                           name="judul" value="{{$data->judul}}">
+                                    @if ($errors->has('judul'))
                                         <span class="invalid-feedback" role="alert">
-                                                            <p><b>{{$errors->first('program')}}</b></p>
-                                                        </span>
+                                            <p><b>{{$errors->first('judul')}}</b></p>
+                                        </span>
                                     @endif
                                 </div>
 

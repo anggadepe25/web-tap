@@ -15,14 +15,14 @@
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-group has-success">
-                                    <label>Prograrm</label>
+                                    <label>Judul</label>
                                     <input type="text"
-                                           class="form-control {{$errors->has('program')?'is-invalid':''}}"
-                                           name="program" value="{{old('program')}}"
+                                           class="form-control {{$errors->has('judul')?'is-invalid':''}}"
+                                           name="judul" value="{{old('judul')}}"
                                            placeholder=" ">
-                                    @if ($errors->has('program'))
+                                    @if ($errors->has('judul'))
                                         <span class="invalid-feedback" role="alert">
-                                            <p><b>{{$errors->first('program')}}</b></p>
+                                            <p><b>{{$errors->first('judul')}}</b></p>
                                         </span>
                                     @endif
                                 </div>
@@ -54,7 +54,6 @@
                                         </span>
                                     @endif
                                 </div>
-
 
                                 <div class="form-group has-success" >
                                     <label>Tanggal Pengumpulan</label>
