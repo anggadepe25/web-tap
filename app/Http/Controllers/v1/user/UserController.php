@@ -16,7 +16,6 @@ class UserController extends Controller
     public function profile()
     {
         $user = Auth::guard('api')->user();
-
         return response()->json([
             'messge' => 'success',
             'status' => true,
