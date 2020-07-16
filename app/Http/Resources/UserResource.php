@@ -31,6 +31,6 @@ class UserResource extends JsonResource
             "instagram" => $this->instagram,
             "status" => $this->status,
             "point" => $this->challenges->sum('point')
-        ]
+        ];
     }
 }

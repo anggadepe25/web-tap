@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\v1\user;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +20,7 @@ class UserController extends Controller
         return response()->json([
             'messge' => 'success',
             'status' => true,
-            'data' => $user
+            'data' => new UserResource($user)
         ]);
     }
 
