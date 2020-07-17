@@ -37,7 +37,7 @@
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
                                            value="{{ old('gambar') }}" />
                                     <img id="output" phpclass="img-fluid" height="40" width="60"
-                                         src="{{asset('uploads/admin/'.$data->gambar)}}">
+                                         src="{{asset($data->gambar)}}">
                                     <br/>
 
                                     @if ($errors->has('gambar'))
