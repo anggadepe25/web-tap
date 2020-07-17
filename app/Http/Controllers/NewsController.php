@@ -59,10 +59,10 @@ class NewsController extends Controller
 //        $path=public_path('uploads/admin');
 //        $image->move($path,$filename);
 
-        $photo = $request->file('gambar');
-        $filename = time() . '.' . $photo->getClientOriginalExtension();
+        $image = $request->file('gambar');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
         $filepath = 'admin/' . $filename;
-        Storage::disk('s3')->put($filepath, file_get_contents($photo));
+        Storage::disk('s3')->put($filepath, file_get_contents($image));
 
         //Menambah Data
         $data = new News();
