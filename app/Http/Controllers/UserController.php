@@ -60,6 +60,8 @@ class UserController extends Controller
             $image->move($path,$filename);
 
             $data->gambar = $filename;
+
+
         }
 
         $data->update();

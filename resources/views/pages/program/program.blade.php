@@ -54,7 +54,7 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$data->judul}}</td>
-                                    <td><img src="{{asset('uploads/admin/'.$data->gambar)}}" width="60" height="40">
+                                    <td><img src="{{asset($data->gambar)}}" width="60" height="40">
                                     </td>
                                     <td>{{$data->panduan}}</td>
                                     <td>{{$data->tanggal_mulai_pengumpulan}}</td>

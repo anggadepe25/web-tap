@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -53,15 +54,20 @@ class NewsController extends Controller
             ]);
 
         //Upload Foto
-        $image=$request->file('gambar');
-        $filename=rand().'.'.$image->getClientOriginalExtension();
-        $path=public_path('uploads/admin');
-        $image->move($path,$filename);
+//        $image=$request->file('gambar');
+//        $filename=rand().'.'.$image->getClientOriginalExtension();
+//        $path=public_path('uploads/admin');
+//        $image->move($path,$filename);
+
+        $photo = $request->file('gambar');
+        $filename = time() . '.' . $photo->getClientOriginalExtension();
+        $filepath = 'admin/' . $filename;
+        Storage::disk('s3')->put($filepath, file_get_contents($photo));
 
         //Menambah Data
         $data = new News();
         $data->judul = $request->judul;
-        $data->gambar = $filename;
+        $data->gambar = Storage::disk('s3')->url($filepath, $filename);
         $data->deskripsi = $request->deskripsi;
         $data->save();
 

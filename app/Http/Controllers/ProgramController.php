@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Program;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\VarDumper\Cloner\Data;
 
 class ProgramController extends Controller
@@ -51,14 +52,19 @@ class ProgramController extends Controller
             'tanggal_mulai_pengumpulan' =>'required',
         ]);
 
+//        $image = $request->file('gambar');
+//        $filename = rand().'.'.$image->getClientOriginalExtension();
+//        $path=public_path('uploads/admin');
+//        $image->move($path, $filename);
+
         $image = $request->file('gambar');
-        $filename = rand().'.'.$image->getClientOriginalExtension();
-        $path=public_path('uploads/admin');
-        $image->move($path, $filename);
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $filepath = 'admin/' . $filename;
+        Storage::disk('s3')->put($filepath, file_get_contents($image));
 
         $data = new Program();
         $data->judul = $request->judul;
-        $data->gambar = $filename;
+        $data->gambar = Storage::disk('s3')->url($filepath, $filename);
         $data->panduan = $request->panduan;
         $data->tanggal_mulai_pengumpulan = $request->tanggal_mulai_pengumpulan;
         $data->tanggal_selesai_pengumpulan = Carbon::parse($request->tanggal_mulai_pengumpulan)->addMonths(1);
