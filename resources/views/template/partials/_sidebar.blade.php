@@ -14,7 +14,7 @@
             <p>
                 Admin
             </p>
-            <a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+            {{--<a href="#"> <i class="fa fa-circle text-success"></i> Online</a>--}}
         </div>
     </div>
 
@@ -36,7 +36,7 @@
         <li class=" nav-item"> <a href="{{route('news')}}"><i class="fa fa-th"></i><span class="menu-title">News</span> </a></li>
         <li class=" nav-item"> <a href="{{route('reward')}}"><i class="fa fa-trophy"></i><span class="menu-title">Reward</span> </a></li>
         <li class=" nav-item"> <a href="{{route('program')}}"><i class="fa fa-plus-square"></i><span class="menu-title">Program</span> </a></li>
-        <li class=" nav-item"> <a href="{{route('challenge')}}"><i class="fa fa-plus-square"></i><span class="menu-title">Challenge</span> </a></li>
+        <li class=" nav-item"> <a href="{{route('challenge')}}"><i class="fa icon-badge"></i><span class="menu-title">Challenge</span> </a></li>
         <li class=" nav-item"> <a href="{{route('user')}}"><i class="fa fa-users"></i><span class="menu-title">Akun</span> </a></li>
     </ul>
 

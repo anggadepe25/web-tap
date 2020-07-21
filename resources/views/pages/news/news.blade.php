@@ -16,12 +16,9 @@
             <div class="col-sm-12">
                 <div class="card card-shadow mb-4">
                     <div class="card-header">
+
                         <div class="justify-content-md-end d-flex">
-
                             <!-- Button trigger modal -->
-
-
-
                             <div class="container-fluid">
                                 <div class="row d-flex align-items-center">
                                     <div class="col-md-6">
@@ -30,21 +27,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 justify-content-md-end d-md-flex">
-                                       {{-- <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#tambah">
-                                            Tambah
-                                        </button>--}}
                                         <a href="{{route('news.create')}}" type="button" class="btn btn-primary">Tambah</a>
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
-
-
                     </div>
+
                     <div class="card-body">
                         <table id="bs4-table" class="table table-bordered table-striped">
                             <thead>

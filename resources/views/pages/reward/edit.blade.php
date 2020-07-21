@@ -16,6 +16,7 @@
                             @csrf
                             {{method_field('PATCH')}}
                             <div class="modal-body">
+
                                 {{--Judul--}}
                                 <div class="form-group has-info">
                                     <label>Judul</label>
@@ -28,7 +29,6 @@
                                                         </span>
                                     @endif
                                 </div>
-
 
                                 {{--keterangan--}}
                                 <div class="form-group has-info">

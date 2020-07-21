@@ -26,8 +26,8 @@
             <div class="col-md-12 text-center">
                 <div class="copy_right">
                     <p>
-                        2019 © Dashboard Theme By
-                        <a href="#">Skypike</a>
+                        {{--2019 © Dashboard Theme By--}}
+                        {{--<a href="#">Skypike</a>--}}
                     </p>
                 </div>
                 <a id="back-to-top" href="#"> <i class="ion-android-arrow-up"></i> </a>
