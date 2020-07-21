@@ -53,7 +53,6 @@
                                 <th>Tanggal Lahir</th>
                                 <th>Tempat Tinggal</th>
                                 <th>Kampus</th>
-                                <th>point</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
@@ -70,7 +69,6 @@
                                     <td>{{$data->tgl_lahir}}</td>
                                     <td>{{$data->tempat_tinggal}}</td>
                                     <td>{{$data->kampus}}</td>
-                                    <td>{{$data->point}}</td>
                                     <td>
                                         <a href="{{route('user.destroy', $data->id)}}">
                                             <button class="btn btn-danger "
