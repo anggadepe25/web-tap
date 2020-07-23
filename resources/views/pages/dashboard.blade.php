@@ -77,10 +77,7 @@
                                 <th>No</th>
                                 <th>User</th>
                                 <th>Program</th>
-                                <th>Link</th>
                                 <th>Point</th>
-                                <th>status</th>
-                                <th>Aksi</th>
                             </tr>
                             </thead>
 
