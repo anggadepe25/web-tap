@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class DashboardControler extends Controller
@@ -14,6 +15,7 @@ class DashboardControler extends Controller
 
     public function index()
     {
-        return view('pages.dashboard');
+        $users = User::all();
+        return view('pages.dashboard', compact('users'));
     }
 }

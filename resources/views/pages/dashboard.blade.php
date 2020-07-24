@@ -4,7 +4,7 @@
  * User: Angga DP
  * Date: 28/03/2020
  * Time: 14:07
- */?>
+ */ ?>
 
 @extends('template.default')
 
@@ -76,48 +76,20 @@
                             <tr>
                                 <th>No</th>
                                 <th>User</th>
-                                <th>Program</th>
                                 <th>Point</th>
                             </tr>
                             </thead>
 
-                            {{--<tbody>--}}
-                            {{--@foreach($datas as $data)--}}
-                                {{--<tr>--}}
-                                    {{--<td>{{$loop->iteration}}</td>--}}
-                                    {{--<td>{{$data->user->nama}}</td>--}}
-                                    {{--<td>{{$data->program->judul}}</td>--}}
-                                    {{--<td><a href="{{$data->link}}" target="_blank" data-toggle="tooltip" title="{{$data->link}}">--}}
-                                            {{--{{ substr_replace($data->link, "...", 20) }}--}}
-                                        {{--</a></td>--}}
-                                    {{--<td>{{$data->point}}</td>--}}
-                                    {{--@if($data->status == 'belum di acc')--}}
-                                        {{--<td><span class="badge badge-warning">{{$data->status}}</span></td>--}}
-                                    {{--@elseif($data->status == 'di konfirmasi')--}}
-                                        {{--<td><span class="badge badge-success">{{$data->status}}</span></td>--}}
-                                    {{--@else--}}
-                                        {{--<td><span class="badge badge-danger">{{$data->status}}</span></td>--}}
-                                    {{--@endif--}}
-                                    {{--<td>--}}
-                                        {{--<a href="{{route('challenge.tolak', $data->id)}}">--}}
-                                            {{--<button class="btn btn-danger"--}}
-                                                    {{--onclick="return confirm('Tolak Challenge Ini?')">--}}
-                                                {{--<i class="fa fa-close"></i>--}}
-                                            {{--</button>--}}
-                                        {{--</a>--}}
-                                        {{--<a href="{{route('challenge.konfirmasi', $data->id)}}">--}}
-                                            {{--<button class="btn btn-success ">--}}
-                                                {{--<i class="fa fa-check"></i>--}}
-                                            {{--</button>--}}
-                                        {{--</a>--}}
-                                    {{--</td>--}}
-                                {{--</tr>--}}
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $user->nama }}</td>
+                                    <td>{{ $user->challenges->sum('point') }}</td>
+                                </tr>
 
-
-
-                            {{--@endforeach--}}
-                            {{--</tbody>--}}
-                            {{----}}
+                            @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>

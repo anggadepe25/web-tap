@@ -17,17 +17,19 @@
                                     <div class="col-md-6">
                                         <div class="card-title">
                                             <h1>Data challenge</h1>
-                                            <form action="{{ route('challenge.search') }}" method="get" class="row">
+                                            <form action="{{ route('challenge.search') }}" method="post" class="row">
+                                                @csrf
                                                 <select name="month" class="form-control col-3 mr-2">
+                                                    <option value="semua">Tampilkan Semua</option>
                                                     @foreach($months as $key => $month)
-                                                        <option value="{{ $key }}">{{ $month }}</option>
+                                                        <option value="{{ $key }}" {{ $key == $keyMonth ? "selected" : '' }}>{{ $month }}</option>
                                                     @endforeach
                                                 </select>
                                                 <button type="submit" class="btn btn-success">filter</button>
                                             </form>
                                         </div>
                                         <div class="col-3">
-                                            <a href="{{url('admin/challenge/pdf?month='.request()->get('month'))}}" type="" class="btn btn-primary" > <i class="fa fa-print"></i> </a>
+                                            <a href="{{route('challenge.pdf' , $keyMonth)}}" type="" class="btn btn-primary" > <i class="fa fa-print"></i> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +72,7 @@
                                     @else
                                         <td><span class="badge badge-danger">{{$data->status}}</span></td>
                                     @endif
-                                    <td>{{ $data->created_at->format('d-m-Y') }}</td>
+                                    <td>{{ $data->created_at->format('Y m d') }}</td>
                                     <td>
                                         <a href="{{route('challenge.tolak', $data->id)}}">
                                             <button class="btn btn-danger"

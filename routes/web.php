@@ -50,6 +50,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('challenge', 'ChallengeController@index')->name('challenge');
     Route::get('challenge/konfirmasi/{id}', 'ChallengeController@konfirmasi')->name('challenge.konfirmasi');
     Route::get('challenge/tolak/{id}', 'ChallengeController@tolak')->name('challenge.tolak');
+    Route::get('challenge/search', 'ChallengeController@search')->name('challenge.search');
+    Route::get('challenge/pdf', 'ChallengeController@pdf')->name('challenge.pdf');
+
 
     Route::get('user', 'UserController@index')->name('user');
     Route::get('user/create', 'UserController@create')->name('user.create');
