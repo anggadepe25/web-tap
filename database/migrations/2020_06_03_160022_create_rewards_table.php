@@ -15,8 +15,8 @@ class CreateRewardsTable extends Migration
     {
         Schema::create('rewards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('judul');
-            $table->string('keterangan');
+            $table->string('judul',30);
+            $table->text('keterangan');
             $table->timestamps();
         });
     }

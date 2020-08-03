@@ -45,17 +45,19 @@ class ProgramController extends Controller
     public function store(Request $request)
     {
 
-        $this->validate($request, [
-            'judul' =>'required',
-            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048',
+        $validasi = [
+            'program' =>'required',
+            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048|required',
             'panduan' =>'required',
-            'tanggal_mulai_pengumpulan' =>'required',
-        ]);
+            'tanggal_pengumpulan' =>'required',
+        ];
 
-//        $image = $request->file('gambar');
-//        $filename = rand().'.'.$image->getClientOriginalExtension();
-//        $path=public_path('uploads/admin');
-//        $image->move($path, $filename);
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+            'mimes' => ':Atribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
 
         $image = $request->file('gambar');
         $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -105,12 +107,20 @@ class ProgramController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
+
+        $validasi = [
             'program' =>'required',
-            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048',
+            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048|required',
             'panduan' =>'required',
             'tanggal_pengumpulan' =>'required',
-        ]);
+        ];
+
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+            'mimes' => ':Atribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
 
 
         $data = Program::find($id);

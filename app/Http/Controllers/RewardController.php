@@ -41,11 +41,21 @@ class RewardController extends Controller
      */
     public function store(Request $request)
     {
-        //Validasi
         $this->validate($request,[
             'judul' =>'required',
             'keterangan' =>'required',
         ]);
+
+        $validasi = [
+            'judul' =>'required',
+            'keterangan' =>'required',
+        ];
+
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
 
         //Menambah Data
         $data = new Reward();
@@ -88,6 +98,23 @@ class RewardController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'judul' =>'required',
+            'keterangan' =>'required',
+        ]);
+
+        $validasi = [
+            'judul' =>'required',
+            'keterangan' =>'required',
+        ];
+
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
+
+
         $data = Reward::find($id);
         $data->judul = $request->judul;
         $data->keterangan = $request->keterangan;

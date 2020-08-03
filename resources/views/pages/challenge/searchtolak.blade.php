@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card card-shadow mb-4">
+                    
                     <div class="card-header">
                         <div class="justify-content-md-end d-flex">
 
@@ -16,29 +17,25 @@
                                 <div class="row d-flex align-items-center">
                                     <div class="col-md-6">
                                         <div class="card-title">
-                                            <h1>Data challenge</h1>
-                                            <form action="{{ route('challenge.search') }}" method="post" class="row">
-                                                @csrf
-                                                <select name="month" class="form-control col-3 mr-2">
-                                                    <option value="semua">Tampilkan Semua</option>
-                                                    @foreach($months as $key => $month)
-                                                        <option value="{{ $key }}" {{ $key == $keyMonth ? "selected" : '' }}>{{ $month }}</option>
-                                                    @endforeach
-                                                </select>
-                                                <button type="submit" class="btn btn-success">filter</button>
-                                            </form>
+                                            <h1>Data Tolak</h1>
                                         </div>
-                                        <div class="col-3">
-                                            <a href="{{route('challenge.pdf' , $keyMonth)}}" type="" class="btn btn-primary" > <i class="fa fa-print"></i> </a>
-                                        </div>
+                                        <form action="{{ route('challenge.searchtolak') }}" method="get" class="row">
+                                            <select name="month" class="form-control col-3 mr-2">
+                                                @foreach($months as $key => $month)
+                                                    <option value="{{ $key }}" {{ $key == $keyMonth ? 'selected' : '' }}>{{ $month }}</option>
+                                                @endforeach
+                                            </select>
+                                            <button type="submit" class="btn btn-success">Cari</button>
+                                        </form>
                                     </div>
                                 </div>
+                                <div class="col-md-12 justify-content-md-end d-md-flex">
+                                    <a href="{{url('admin/challenge/pdf?month=').request()->month}}" type="" class="btn btn-primary" > <i class="fa fa-print"> Cetak </i> </a>
+                                </div>
                             </div>
-
                         </div>
-
-
                     </div>
+
                     <div class="card-body">
                         <table id="bs4-table" class="table table-bordered table-striped">
                             <thead>
@@ -50,7 +47,6 @@
                                 <th>Point</th>
                                 <th>status</th>
                                 <th>Tanggal Pengumpulan</th>
-                                <th>Aksi</th>
                             </tr>
                             </thead>
 
@@ -72,24 +68,9 @@
                                     @else
                                         <td><span class="badge badge-danger">{{$data->status}}</span></td>
                                     @endif
-                                    <td>{{ $data->created_at->format('Y m d') }}</td>
-                                    <td>
-                                        <a href="{{route('challenge.tolak', $data->id)}}">
-                                            <button class="btn btn-danger"
-                                                    onclick="return confirm('Tolak Challenge Ini?')">
-                                                <i class="fa fa-close"></i>
-                                            </button>
-                                        </a>
-                                        <a href="{{route('challenge.konfirmasi', $data->id)}}">
-                                            <button class="btn btn-success ">
-                                                <i class="fa fa-check"></i>
-                                            </button>
-                                        </a>
-                                    </td>
+                                    <td>{{ $data->created_at->format('d-m-Y') }}</td>
+
                                 </tr>
-
-
-
                             @endforeach
                             </tbody>
                         </table>

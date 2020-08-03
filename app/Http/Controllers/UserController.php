@@ -29,6 +29,25 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+        $validasi = [
+            'new' =>'required',
+            'nama' =>'required',
+            'nohp' =>'required',
+            'email' =>'required',
+            'password' =>'required',
+            'tgl_lahir' =>'required',
+            'branch' =>'required',
+            'jenis_kelamin' =>'required',
+            'tempat_tinggal' =>'required',
+            'kampus' =>'required',
+        ];
+
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
+
         $akun = new User();
         $akun->nama = $request->nama;
         $akun->nohp = $request->nohp;

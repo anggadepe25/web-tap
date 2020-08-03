@@ -16,9 +16,20 @@
                                 <div class="row d-flex align-items-center">
                                     <div class="col-md-6">
                                         <div class="card-title">
-                                            <h1>Data challenge</h1>
+                                            <h1>Data Konfirmasi</h1>
                                         </div>
+                                        <form action="{{ route('challenge.searchkonfirmasi') }}" method="get" class="row">
+                                            <select name="month" class="form-control col-3 mr-2">
+                                                @foreach($months as $key => $month)
+                                                    <option value="{{ $key }}">{{ $month }}</option>
+                                                @endforeach
+                                            </select>
+                                            <button type="submit" class="btn btn-success">Cari</button>
+                                        </form>
                                     </div>
+                                </div>
+                                <div class="col-md-12 justify-content-md-end d-md-flex">
+                                    <a href="{{url('admin/challenge/pdf?month=').request()->month}}" type="" class="btn btn-primary" > <i class="fa fa-print"> Cetak </i> </a>
                                 </div>
                             </div>
 
@@ -34,9 +45,9 @@
                                 <th>User</th>
                                 <th>Program</th>
                                 <th>Link</th>
+                                <th>Point</th>
                                 <th>status</th>
                                 <th>Tanggal Pengumpulan</th>
-                                <th>Aksi</th>
                             </tr>
                             </thead>
 
@@ -50,6 +61,7 @@
                                            title="{{$data->link}}">
                                             {{ substr_replace($data->link, "...", 20) }}
                                         </a></td>
+                                    <td>{{$data->point}}</td>
                                     @if($data->status == 'belum di acc')
                                         <td><span class="badge badge-warning">{{$data->status}}</span></td>
                                     @elseif($data->status == 'di konfirmasi')
@@ -58,24 +70,8 @@
                                         <td><span class="badge badge-danger">{{$data->status}}</span></td>
                                     @endif
                                     <td>{{ $data->created_at->format('d-m-Y') }}</td>
-                                    <td>
-                                        <a href="{{route('challenge.tolak', $data->id)}}">
-                                            <button class="btn btn-danger"
-                                                    onclick="return confirm('Tolak Challenge Ini?')">
-                                                <i class="fa fa-close"></i>
-                                            </button>
-                                        </a>
-                                        <a href="{{route('challenge.konfirmasi', $data->id)}}">
-                                            <button class="btn btn-success"
-                                                    onclick="return confirm('Konfirmasi Challenge Ini?')">
-                                                <i class="fa fa-check"></i>
-                                            </button>
-                                        </a>
-                                    </td>
+
                                 </tr>
-
-
-
                             @endforeach
                             </tbody>
                         </table>

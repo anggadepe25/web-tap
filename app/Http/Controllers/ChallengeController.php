@@ -37,11 +37,11 @@ class ChallengeController extends Controller
         $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
             'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 
-        $datas = Challenge::all();
+        $datas = Challenge::where('status', 'belum di acc')->get();
         return view('pages.challenge.challenge', compact('datas', 'months'));
     }
 
-    public function search(Request $request){
+    public function searchkonfirmasi(Request $request){
         $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
             'Agustus', 'September', 'Oktober', 'November', 'Desember'];
         if ($request->month == 'semua'){
@@ -49,11 +49,35 @@ class ChallengeController extends Controller
             $keyMonth= 0;
         }else{
             $keyMonth = (integer)$request->month + 1;
-            $datas = Challenge::whereMonth('created_at', $keyMonth)->get();
+            $datas = Challenge::where('status', 'di konfirmasi')->whereMonth('created_at', $keyMonth)->get();
             $keyMonth -= 1;
         }
-        return view('pages.challenge.challenge', compact('datas', 'months', 'keyMonth'));
+        return view('pages.challenge.searchkonfirmasi', compact('datas', 'months', 'keyMonth'));
     }
+
+    public function searchtolak(Request $request){
+        $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+            'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        if ($request->month == 'semua'){
+            $datas = Challenge::all();
+            $keyMonth= 0;
+        }else{
+            $keyMonth = (integer)$request->month + 1;
+            $datas = Challenge::where('status', 'di tolak')->whereMonth('created_at', $keyMonth)->get();
+            $keyMonth -= 1;
+        }
+        return view('pages.challenge.searchtolak', compact('datas', 'months', 'keyMonth'));
+    }
+
+    public function datakonfirmasi()
+    {
+        $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+            'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+        $datas = Challenge::where('status', 'di konfirmasi')->get();
+        return view('pages.challenge.datakonfirmasi', compact('datas', 'months'));
+    }
+
 
     public function konfirmasi($id)
     {
@@ -62,6 +86,15 @@ class ChallengeController extends Controller
         $data->update();
 
         return redirect()->route('challenge');
+    }
+
+    public function datatolak()
+    {
+        $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+            'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+        $datas = $datas = Challenge::where('status', 'di tolak')->get();
+        return view('pages.challenge.datatolak', compact('datas', 'months'));
     }
 
     public function tolak($id)

@@ -46,18 +46,18 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //Validasi
-        $this->validate($request,[
+        $validasi = [
             'judul' =>'required',
-            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048',
+            'gambar' =>'required|file|image|mimes:jpg,png,jpeg|max:2048' ,
             'deskripsi' =>'required',
-            ]);
+        ];
 
-        //Upload Foto
-//        $image=$request->file('gambar');
-//        $filename=rand().'.'.$image->getClientOriginalExtension();
-//        $path=public_path('uploads/admin');
-//        $image->move($path,$filename);
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+            'mimes' => ':Atribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
 
         $image = $request->file('gambar');
         $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -106,6 +106,22 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validasi = [
+            'judul' =>'required',
+            'gambar' =>'required|file|image|mimes:jpg,png,jpeg|max:2048' ,
+            'deskripsi' =>'required',
+        ];
+
+        $message = [
+            'required' => ':Attribute Tidak Boleh Kosong',
+            'mimes' => ':Atribute Tidak Boleh Kosong',
+        ];
+
+        $this->validate($request, $validasi,$message);
+
+
+
         $data = News::find($id);
         $data->judul = $request->judul;
         $data->deskripsi = $request->deskripsi;

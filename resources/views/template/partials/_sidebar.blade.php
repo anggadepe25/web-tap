@@ -36,7 +36,21 @@
         <li class=" nav-item"> <a href="{{route('news')}}"><i class="fa fa-th"></i><span class="menu-title">News</span> </a></li>
         <li class=" nav-item"> <a href="{{route('reward')}}"><i class="fa fa-trophy"></i><span class="menu-title">Reward</span> </a></li>
         <li class=" nav-item"> <a href="{{route('program')}}"><i class="fa fa-plus-square"></i><span class="menu-title">Program</span> </a></li>
-        <li class=" nav-item"> <a href="{{route('challenge')}}"><i class="fa icon-badge"></i><span class="menu-title">Challenge</span> </a></li>
+        {{--<li class=" nav-item"> <a href="{{route('challenge')}}"><i class="fa icon-badge"></i><span class="menu-title">Challenge</span> </a></li>--}}
+        <li class="menu_sub">
+            <a> <i class="fa icon-badge"></i> <span>Challenge </span> <span class="icon-arrow-down styleicon"></span> </a>
+            <ul class="down_menu">
+                <li>
+                    <a href="{{route('challenge')}}"> Data Challenge</a>
+                </li>
+                <li>
+                    <a href="{{route('challenge.datakonfirmasi')}}">Konfirmasi</a>
+                </li>
+                <li>
+                    <a href="{{route('challenge.datatolak')}}">Tolak</a>
+                </li>
+            </ul>
+        </li>
         <li class=" nav-item"> <a href="{{route('user')}}"><i class="fa fa-users"></i><span class="menu-title">Akun</span> </a></li>
     </ul>
 

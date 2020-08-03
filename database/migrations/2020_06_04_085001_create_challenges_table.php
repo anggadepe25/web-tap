@@ -17,9 +17,9 @@ class CreateChallengesTable extends Migration
             $table->increments('id');
             $table->integer('id_user')->unsigned();
             $table->integer('id_program')->unsigned();
-            $table->string('link');
+            $table->string('link',191);
             $table->integer('point')->default(0);
-            $table->string('status');
+            $table->string('status',10);
             $table->timestamps();
 
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');

@@ -15,24 +15,23 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('email')->unique();
+            $table->string('nama', 30);
+            $table->string('email',50)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->text('foto')->nullable();
-            $table->string('nohp',13)->nullable()->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->string('api_token', 80)->nullable()->unique();
-            $table->string('branch');
-            $table->string('jenis_kelamin');
+            $table->char('nohp',13)->nullable()->unique();
+            $table->string('password',191);
+            $table->string('api_token', 191)->nullable()->unique();
+            $table->string('branch',30);
+            $table->string('jenis_kelamin',9);
             $table->date('tgl_lahir');
-            $table->string('tempat_tinggal');
-            $table->string('kampus');
-            $table->string('jurusan')->nullable();
-            $table->integer('semester')->nullable();
-            $table->string('hobi')->nullable();
-            $table->string('instagram')->nullable();
-            $table->enum('status',['0','1'])->default('0');
+            $table->string('tempat_tinggal',15);
+            $table->string('kampus',30);
+            $table->string('jurusan',20)->nullable();
+            $table->char('semester', 1)->nullable();
+            $table->string('hobi',20)->nullable();
+            $table->string('instagram',20)->nullable();
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

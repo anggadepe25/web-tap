@@ -48,9 +48,13 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('program/destroy/{id}', 'ProgramController@destroy')->name('program.destroy');
 
     Route::get('challenge', 'ChallengeController@index')->name('challenge');
+    Route::get('challenge/datakonfirmasi', 'ChallengeController@datakonfirmasi')->name('challenge.datakonfirmasi');
+    Route::get('challenge/datatolak', 'ChallengeController@datatolak')->name('challenge.datatolak');
+    Route::get('challenge/tolak', 'ChallengeController@index')->name('challenge.tolak');
     Route::get('challenge/konfirmasi/{id}', 'ChallengeController@konfirmasi')->name('challenge.konfirmasi');
     Route::get('challenge/tolak/{id}', 'ChallengeController@tolak')->name('challenge.tolak');
-    Route::get('challenge/search', 'ChallengeController@search')->name('challenge.search');
+    Route::get('challenge/search/konfirmasi', 'ChallengeController@searchkonfirmasi')->name('challenge.searchkonfirmasi');
+    Route::get('challenge/search/tolak', 'ChallengeController@searchtolak')->name('challenge.searchtolak');
     Route::get('challenge/pdf', 'ChallengeController@pdf')->name('challenge.pdf');
 
 
