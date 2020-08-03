@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('template.default');
+    return redirect()->route('dashboard');
 })->name('login');
 
 Route::get('admin/register','Auth\RegisterController@showFormRegister')->name('admin.register');
