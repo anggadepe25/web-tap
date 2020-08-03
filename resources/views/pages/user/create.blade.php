@@ -7,7 +7,7 @@
                 <div class="card card-shadow mb-4">
                     <div class="card-header">
                         <div class="card-title">
-                            Basic Form Controls
+                            Tambah Data Akun
                         </div>
                     </div>
                     <div class="card-body">
@@ -35,7 +35,6 @@
                                             <p><b>{{ $errors->first('nohp') }}</b></p>
                                         </span>
                                     @endif
-
                                 </div>
 
 
@@ -61,7 +60,6 @@
                             </div>
 
                             <div class="col-sm-6">
-
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tanggal lahir</label>
                                     <input type="date" class="form-control {{$errors->has('tgl_lahir')?'is-invalid':''}}"
@@ -82,8 +80,8 @@
                                            placeholder=" ">
                                     @if ($errors->has('tempat_tinggal'))
                                         <span class="invalid-feedback" role="alert">
-                                                            <p><b>{{$errors->first('tempat_tinggal')}}</b></p>
-                                                         </span>
+                                            <p><b>{{$errors->first('tempat_tinggal')}}</b></p>
+                                        </span>
                                     @endif
 
                                 </div>
@@ -110,7 +108,6 @@
                                             <p><b>{{ $errors->first('email') }}</b></p>
                                         </span>
                                     @endif
-
                                 </div>
 
                             </div>
@@ -118,7 +115,6 @@
                             <div class="form-group ml-3">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
-
                         </form>
                     </div>
                 </div>

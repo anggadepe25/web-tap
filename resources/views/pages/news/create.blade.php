@@ -7,7 +7,7 @@
                 <div class="card card-shadow mb-4">
                     <div class="card-header">
                         <div class="card-title">
-                            Basic Form Controls
+                            Tambah Data News
                         </div>
                     </div>
                     <div class="card-body">
