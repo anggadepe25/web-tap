@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         $user = Auth::guard('api')->user();
         $user->nama = $request->nama;
-        $user->no_hp = $request->nohp;
+        $user->nohp = $request->nohp;
         $user->tempat_tinggal = $request->tempat_tinggal;
         $user->kampus = $request->kampus;
         $user->jurusan = $request->jurusan;
