@@ -24,4 +24,5 @@
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
     <!--bs4 data table-->
     <link href="{{asset('assets/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    @yield('head')
 </head>

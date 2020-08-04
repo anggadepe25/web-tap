@@ -39,7 +39,7 @@
 
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlSele  ct1">Branch</label>
+                                    <label>Branch</label>
                                     <select class="form-control" name="branch">
                                         <option value="pekalongan">Pekalongan</option>
                                         <option value="purwokerto">Purwokerto</option>
@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label>Jenis Kelamin</label>
                                     <select name="jenis_kelamin" class="form-control">
-                                        <option value="laki-laki">Laki Laki</option>
+                                        <option value="laki-laki">Laki-Laki</option>
                                         <option value="perempuan">Perempuan</option>
                                     </select>
                                 </div>

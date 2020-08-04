@@ -1,4 +1,7 @@
 @extends('template.default')
+@section('head')
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@endsection
 @section('content')
     <div class="container-fluid">
         <!-- state start-->
@@ -11,7 +14,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form class="row" action="{{ route('program.store') }}" method="post" enctype="multipart/form-data">
+                        <form class="row" action="{{ route('program.store') }}" method="post"
+                              enctype="multipart/form-data">
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-group has-success">
@@ -55,10 +59,10 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group has-success" >
+                                <div class="form-group has-success">
                                     <label>Tanggal Pengumpulan</label>
 
-                                    <input type="date"
+                                    <input type="text" id="datepicker" readonly style="cursor: pointer; background: white"
                                            class="form-control {{$errors->has('tanggal_mulai_pengumpulan')?'is-invalid':''}}"
                                            name="tanggal_mulai_pengumpulan" value="{{old('tanggal_mulai_pengumpulan')}}"
                                            placeholder=" ">
@@ -95,4 +99,17 @@
         };
     </script>
 
+@endsection
+
+@section('script')
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                startDate: new Date(),
+                minDate: new Date()
+            });
+        } );
+    </script>
 @endsection

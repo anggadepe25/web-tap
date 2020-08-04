@@ -30,11 +30,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validasi = [
-            'new' =>'required',
-            'nama' =>'required',
-            'nohp' =>'required',
-            'email' =>'required',
-            'password' =>'required',
+            'nama' =>'required|regex:/^[\pL\s\-]+$/u||min:5',
+            'nohp' =>'required|numeric|digits_between:11,13|regex:/(08)[0-9]{9}/|unique:users',
+            'email' =>'required|unique:users|email',
             'tgl_lahir' =>'required',
             'branch' =>'required',
             'jenis_kelamin' =>'required',
@@ -44,6 +42,10 @@ class UserController extends Controller
 
         $message = [
             'required' => ':Attribute Tidak Boleh Kosong',
+            'unique' => ':Attribute Sudah Terdaftar',
+            'email'     => ':Attribute Harus Sesuai Format Email',
+            'nohp.regex'     => ':Attribute Harus Sesuai Format 08xx-xxxx-xxxx',
+            'nama.regex'     => ':Attribute Harus Huruf'
         ];
 
         $this->validate($request, $validasi,$message);
