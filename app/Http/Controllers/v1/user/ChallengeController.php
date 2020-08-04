@@ -25,19 +25,6 @@ class ChallengeController extends Controller
         $challenge->link = $request->link;
         $challenge->status = 'belum di acc';
 
-        $program = Program::where('id', $request->id_program)->first();
-        $week = Carbon::parse($program->tanggal_mulai_pengumpulan)->weekNumberInMonth;
-        $weeknow = Carbon::now()->weekNumberInMonth;
-
-        if ($weeknow == $week){
-            $challenge->point = 500;
-        }elseif ($weeknow == $week + 2){
-            $challenge->point = 300;
-        }elseif ($weeknow == $week + 3){
-            $challenge->point = 100;
-        }else{
-            $challenge->point = 0;
-        }
         $challenge->save();
 
         return response()->json([

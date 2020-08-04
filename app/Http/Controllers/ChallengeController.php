@@ -82,6 +82,19 @@ class ChallengeController extends Controller
     public function konfirmasi($id)
     {
         $data = Challenge::findOrFail($id);
+        $program = Program::where('id', $data->id_program)->first();
+        $week = Carbon::parse($program->tanggal_mulai_pengumpulan)->weekNumberInMonth;
+        $weeknow = Carbon::now()->weekNumberInMonth;
+
+        if ($weeknow == $week){
+            $data->point = 500;
+        }elseif ($weeknow == $week + 2){
+            $data->point = 300;
+        }elseif ($weeknow == $week + 3){
+            $data->point = 100;
+        }else{
+            $data->point = 0;
+        }
         $data->status = 'di konfirmasi';
         $data->update();
 
