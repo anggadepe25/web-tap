@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
@@ -62,5 +63,18 @@ class UserController extends Controller
             'status' => true,
             'data' => (object)[]
         ]);
+    }
+
+    public function updatePassword(Request $request){
+        $user = Auth::guard('api')->user();
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return response()->json([
+            'messge' => 'success',
+            'status' => true,
+            'data' => (object)[]
+        ]);
+
     }
 }
