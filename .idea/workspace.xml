@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21f1dfa5-e171-4717-9654-09341a1ec949" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,46 +27,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php">
+      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datakonfirmasi.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/challenge/datakonfirmasi.blade.php">
+      <file leaf-file-name="ChallengeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#4597#0#Blade" expanded="false" />
-                <marker date="1595985513859" expanded="true" signature="9:27" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="39:48" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="804:841" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="1026:1051" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="1122:1128" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="1134:1142" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="1638:1688" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="2590:2605" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="2686:2702" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="2752:2769" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="2819:2840" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="2899:2910" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3004:3015" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3066:3106" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3201:3213" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3261:3292" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3374:3387" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3446:3478" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3560:3573" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3709:3722" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="3822:3858" ph="..." />
-                <marker date="1595985513859" expanded="true" signature="4133:4141" ph="..." />
-              </folding>
+            <state relative-caret-position="142">
+              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -317,7 +294,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_04_03_133906_create_news_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_06_03_155927_create_programs_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_06_03_160022_create_rewards_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/news/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/reward/create.blade.php" />
@@ -339,6 +315,7 @@
         <option value="$PROJECT_DIR$/resources/views/pages/news/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/v1/user/ChallengeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
       </list>
     </option>
   </component>
@@ -354,7 +331,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -450,6 +427,12 @@
               <item name="tap" type="b2602c69:ProjectViewProjectNode" />
               <item name="tap" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tap" type="b2602c69:ProjectViewProjectNode" />
@@ -571,15 +554,15 @@
       <workItem from="1594940308239" duration="6688000" />
       <workItem from="1595224235567" duration="8329000" />
       <workItem from="1595370887622" duration="38740000" />
-      <workItem from="1596078111127" duration="22577000" />
+      <workItem from="1596078111127" duration="23037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274460000" />
+    <option name="totallyTimeSpent" value="274920000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -903,14 +886,6 @@
             <marker date="1596510437983" expanded="true" signature="2746:2759" ph="..." />
             <marker date="1596510437983" expanded="true" signature="2859:2891" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,6 +1359,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
