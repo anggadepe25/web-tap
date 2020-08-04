@@ -1,4 +1,9 @@
 @extends('template.default')
+
+@section('head')
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <!-- state start-->
@@ -49,18 +54,19 @@
                                 {{--Deskripsi--}}
                                 <div class="form-group has-info">
                                     <label>Panduan</label>
-                                    <textarea type="textarea" name="panduan"
+                                    <textarea type="textarea"
+                                              name="panduan"
                                               class="form-control {{$errors->has('panduan')?'is-invalid':''}}">{{$data->panduan}}</textarea>
                                     @if ($errors->has('panduan'))
                                         <span class="invalid-feedback" role="alert">
-                                                            <p><b>{{$errors->first('panduan')}}</b></p>
-                                                        </span>
+                                            <p><b>{{$errors->first('panduan')}}</b></p>
+                                        </span>
                                     @endif
                                 </div>
 
                                 <div class="form-group has-warning">
                                     <label>Tanggal Pengumpulan</label>
-                                    <input type="date"
+                                    <input id="datepicker" readonly style="cursor: pointer; background: white"
                                            class="form-control {{$errors->has('tanggal_mulai_pengumpulan')?'is-invalid':''}}"
                                            name="tanggal_mulai_pengumpulan" value="{{ $data->tanggal_mulai_pengumpulan }}"
                                            placeholder=" ">
@@ -101,4 +107,18 @@
         };
     </script>
 
+@endsection
+
+@section('script')
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                dateFormat: 'yy-mm-dd',
+                startDate: new Date(),
+                minDate: new Date()
+            });
+        } );
+    </script>
 @endsection
