@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -34,7 +35,6 @@ class UserController extends Controller
 
         $user = Auth::guard('api')->user();
         $user->nama = $request->nama;
-        $user->foto = $filename;
         $user->no_hp = $request->no_hp;
         $user->password = $request->password;
         $user->tempat_tinggal = $request->tempat_tinggal;
@@ -48,6 +48,26 @@ class UserController extends Controller
         return response()->json([
             'messge' => 'success',
             'status' => true,
+            'data' => (object)[]
+        ]);
+    }
+
+    public function updatePhoto(Request $request){
+
+        $image = $request->file('foto');
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $filepath = 'admin/' . $filename;
+        Storage::disk('s3')->put($filepath, file_get_contents($image));
+
+
+        $user = Auth::guard('api')->user();
+        $user->foto = Storage::disk('s3')->url($filepath, $filename);
+        $user->save();
+
+        return response()->json([
+            'messge' => 'success',
+            'status' => true,
+            'data' => (object)[]
         ]);
     }
 }

@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('user/login', 'v1\user\Auth\LoginController@login');
 Route::get('user/profile', 'v1\user\UserController@profile');
 Route::post('user/profile/update', 'v1\user\UserController@updateProfile');
+Route::post('user/profile/update/photo', 'v1\user\UserController@updatePhoto');
 
 Route::get('news', 'v1\user\NewsController@news');
 Route::get('reward','v1\user\RewardController@reward');
