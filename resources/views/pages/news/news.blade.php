@@ -52,7 +52,7 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$data->judul}}</td>
-                                    <td><img src="{{asset($data->gambar)}}" width="60" height="40">
+                                    <td><img src="{{$data->gambar}}" width="60" height="40">
                                     </td>
                                     <td>{{$data->deskripsi}}</td>
                                     <td>
