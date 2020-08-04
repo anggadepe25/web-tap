@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Challenge;
+use App\Program;
+use Carbon\Carbon;
 use Dompdf\Dompdf;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
