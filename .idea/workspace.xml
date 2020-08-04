@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21f1dfa5-e171-4717-9654-09341a1ec949" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/v1/user/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/v1/user/UserController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/v1/user/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+            <state relative-caret-position="204">
+              <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -314,12 +313,12 @@
       <workItem from="1594940308239" duration="6688000" />
       <workItem from="1595224235567" duration="8329000" />
       <workItem from="1595370887622" duration="38740000" />
-      <workItem from="1596078111127" duration="11923000" />
+      <workItem from="1596078111127" duration="12657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263806000" />
+    <option name="totallyTimeSpent" value="264540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1100,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/v1/user/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        <state relative-caret-position="204">
+          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding />
         </state>
       </provider>
