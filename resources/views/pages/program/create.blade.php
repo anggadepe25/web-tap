@@ -62,7 +62,7 @@
                                 <div class="form-group has-success">
                                     <label>Tanggal Pengumpulan</label>
 
-                                    <input type="text" id="datepicker" readonly style="cursor: pointer; background: white"
+                                    <input id="datepicker" readonly style="cursor: pointer; background: white"
                                            class="form-control {{$errors->has('tanggal_mulai_pengumpulan')?'is-invalid':''}}"
                                            name="tanggal_mulai_pengumpulan" value="{{old('tanggal_mulai_pengumpulan')}}"
                                            placeholder=" ">
@@ -107,6 +107,7 @@
     <script>
         $( function() {
             $( "#datepicker" ).datepicker({
+                dateFormat: 'yy-mm-dd',
                 startDate: new Date(),
                 minDate: new Date()
             });

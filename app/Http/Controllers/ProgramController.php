@@ -47,9 +47,9 @@ class ProgramController extends Controller
 
         $validasi = [
             'judul' =>'required',
-            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048|required',
+            'gambar' =>'required|file|image|mimes:jpg,png,jpeg|max:2048',
             'panduan' =>'required',
-            'tanggal_pengumpulan' =>'required',
+            'tanggal_mulai_pengumpulan' =>'required',
         ];
 
         $message = [
@@ -57,7 +57,7 @@ class ProgramController extends Controller
             'mimes' => ':Atribute Tidak Boleh Kosong',
         ];
 
-        $this->validate($request, $validasi,$message);
+        $this->validate($request, $validasi, $message);
 
         $image = $request->file('gambar');
         $filename = time() . '.' . $image->getClientOriginalExtension();
