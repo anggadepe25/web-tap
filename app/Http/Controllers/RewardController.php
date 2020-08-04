@@ -41,11 +41,6 @@ class RewardController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'judul' =>'required',
-            'keterangan' =>'required',
-        ]);
-
         $validasi = [
             'judul' =>'required',
             'keterangan' =>'required',

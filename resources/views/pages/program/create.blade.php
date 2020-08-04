@@ -61,7 +61,6 @@
 
                                 <div class="form-group has-success">
                                     <label>Tanggal Pengumpulan</label>
-
                                     <input id="datepicker" readonly style="cursor: pointer; background: white"
                                            class="form-control {{$errors->has('tanggal_mulai_pengumpulan')?'is-invalid':''}}"
                                            name="tanggal_mulai_pengumpulan" value="{{old('tanggal_mulai_pengumpulan')}}"

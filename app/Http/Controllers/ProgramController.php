@@ -109,10 +109,10 @@ class ProgramController extends Controller
     {
 
         $validasi = [
-            'program' =>'required',
-            'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048|required',
+            'judul' =>'required',
+            'gambar' =>'required|file|image|mimes:jpg,png,jpeg|max:2048',
             'panduan' =>'required',
-            'tanggal_pengumpulan' =>'required',
+            'tanggal_mulai_pengumpulan' =>'required',
         ];
 
         $message = [
@@ -120,21 +120,21 @@ class ProgramController extends Controller
             'mimes' => ':Atribute Tidak Boleh Kosong',
         ];
 
-        $this->validate($request, $validasi,$message);
-
+        $this->validate($request, $validasi, $message);
 
         $data = Program::find($id);
         $data->judul = $request->judul;
         $data->panduan = $request->panduan;
-        $data->tanggal_pengumpulan = $request->tanggal_pengumpulan;
+        $data->tanggal_mulai_pengumpulan = $request->tanggal_mulai_pengumpulan;
+        $data->tanggal_selesai_pengumpulan = Carbon::parse($request->tanggal_mulai_pengumpulan)->addMonths(1);
         $image = $request->file('gambar');
         if ($image== ''){
             $data->gambar=$request->old_gambar;
         }else{
-            $filename=time().'.'.$image->getClientOriginalExtension();
-            $path=public_path('uploads/admin');
-            $image->move($path,$filename);
-            $data->gambar = $filename;
+            $image = $request->file('gambar');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $filepath = 'admin/' . $filename;
+            Storage::disk('s3')->put($filepath, file_get_contents($image));
         }
 
         $data->update();

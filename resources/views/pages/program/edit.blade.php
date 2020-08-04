@@ -42,7 +42,7 @@
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
                                            value="{{ old('gambar') }}"/>
                                     <img id="output" class="img-fluid" height="40" width="60"
-                                         src="{{asset($data->gambar)}}">
+                                         src="{{($data->gambar)}}">
 
                                     @if ($errors->has('gambar'))
                                         <span class="invalid-feedback" role="alert">
@@ -63,17 +63,16 @@
                                         </span>
                                     @endif
                                 </div>
-
-                                <div class="form-group has-warning">
+                                <div class="form-group has-success">
                                     <label>Tanggal Pengumpulan</label>
                                     <input id="datepicker" readonly style="cursor: pointer; background: white"
                                            class="form-control {{$errors->has('tanggal_mulai_pengumpulan')?'is-invalid':''}}"
-                                           name="tanggal_mulai_pengumpulan" value="{{ $data->tanggal_mulai_pengumpulan }}"
+                                           name="tanggal_mulai_pengumpulan" value="{{$data->tanggal_mulai_pengumpulan}}"
                                            placeholder=" ">
                                     @if ($errors->has('tanggal_mulai_pengumpulan'))
                                         <span class="invalid-feedback" role="alert">
-                                                            <p><b>{{$errors->first('tanggal_mulai_pengumpulan')}}</b></p>
-                                                        </span>
+                                            <p><b>{{$errors->first('tanggal_mulai_pengumpulan')}}</b></p>
+                                        </span>
                                     @endif
                                 </div>
 
