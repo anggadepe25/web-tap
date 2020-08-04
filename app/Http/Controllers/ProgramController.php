@@ -46,7 +46,7 @@ class ProgramController extends Controller
     {
 
         $validasi = [
-            'program' =>'required',
+            'judul' =>'required',
             'gambar' =>'file|image|mimes:jpg,png,jpeg|max:2048|required',
             'panduan' =>'required',
             'tanggal_pengumpulan' =>'required',
