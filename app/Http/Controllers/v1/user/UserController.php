@@ -27,16 +27,9 @@ class UserController extends Controller
 
     public function updateProfil(Request $request)
     {
-
-        $image=$request->file('foto');
-        $filename=rand().'.'.$image->getClientOriginalExtension();
-        $path=public_path('uploads/user');
-        $image->move($path,$filename);
-
         $user = Auth::guard('api')->user();
         $user->nama = $request->nama;
-        $user->no_hp = $request->no_hp;
-        $user->password = $request->password;
+        $user->no_hp = $request->nohp;
         $user->tempat_tinggal = $request->tempat_tinggal;
         $user->kampus = $request->kampus;
         $user->jurusan = $request->jurusan;
