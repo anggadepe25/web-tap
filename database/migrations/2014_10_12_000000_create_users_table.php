@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('jenis_kelamin',9);
             $table->date('tgl_lahir');
             $table->string('tempat_tinggal',15);
-            $table->string('kampus',30);
+            $table->string('kampus',50);
             $table->string('jurusan',20)->nullable();
             $table->char('semester', 1)->nullable();
             $table->string('hobi',20)->nullable();
