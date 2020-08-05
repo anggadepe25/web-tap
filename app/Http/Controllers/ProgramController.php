@@ -133,7 +133,8 @@ class ProgramController extends Controller
         }else{
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $filepath = 'admin/' . $filename;
-            $data->gambar = Storage::disk('s3')->put($filepath, file_get_contents($image));
+            Storage::disk('s3')->put($filepath, file_get_contents($image));
+            $data->gambar = Storage::disk('s3')->url($filepath, $filename);
         }
         $data->update();
         return redirect()->route('program')->with('update','Berhasil Mengubah Data');
