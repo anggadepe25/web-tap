@@ -31,23 +31,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-sm-6 mb-4">
-                <div class="card bg-info border-0 text-light pt-3 pb-3 h-100">
-                    <div class="card-body ">
-                        <div class="row-cols-md-3">
-                            <div class=" col-3">
-                                <i class="icon-badge f30"></i>
-                            </div>
-                            <div class=" col-9">
-                                <h6 class="m-0 text-light">Point</h6>
-                                <p class="f12 mb-0">
-                                    {{ $point }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="col-xl-6 col-sm-6 mb-4">--}}
+                {{--<div class="card bg-info border-0 text-light pt-3 pb-3 h-100">--}}
+                    {{--<div class="card-body ">--}}
+                        {{--<div class="row-cols-md-3">--}}
+                            {{--<div class=" col-3">--}}
+                                {{--<i class="icon-badge f30"></i>--}}
+                            {{--</div>--}}
+                            {{--<div class=" col-9">--}}
+                                {{--<h6 class="m-0 text-light">Point</h6>--}}
+                                {{--<p class="f12 mb-0">--}}
+                                    {{--{{ $point }}--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <div class="col-sm-12">
                 <div class="card card-shadow mb-4">
