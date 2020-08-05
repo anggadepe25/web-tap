@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-xl-6 col-sm-6 mb-4">
+            <div class="col-xl-12 col-sm-12 mb-4">
                 <div class="card bg-primary border-0 text-light pt-3 pb-3 h-100">
                     <div class="card-body ">
                         <div class="row-cols-md-3">

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21f1dfa5-e171-4717-9654-09341a1ec949" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardControler.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardControler.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DashboardControler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DashboardControler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardControler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -40,20 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding>
-                <marker date="1596589999608" expanded="true" signature="104:122" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="134:143" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="794:807" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="1648:1656" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="3182:3197" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="3278:3296" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="3346:3359" ph="..." />
-                <marker date="1596589999608" expanded="true" signature="3409:3442" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="104:122" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="134:143" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="796:809" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="1650:1658" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="3184:3199" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="3280:3298" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="3348:3361" ph="..." />
+                <marker date="1596590050432" expanded="true" signature="3411:3444" ph="..." />
               </folding>
             </state>
           </provider>
@@ -161,8 +160,8 @@
         <option value="$PROJECT_DIR$/resources/views/pages/program/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/program/program.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProgramController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardControler.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -352,12 +351,12 @@
       <workItem from="1594940308239" duration="6688000" />
       <workItem from="1595224235567" duration="8329000" />
       <workItem from="1595370887622" duration="38740000" />
-      <workItem from="1596078111127" duration="26787000" />
+      <workItem from="1596078111127" duration="26828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278670000" />
+    <option name="totallyTimeSpent" value="278711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -372,7 +371,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37908497" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37908497" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1148,29 +1147,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <marker date="1596589999608" expanded="true" signature="104:122" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="134:143" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="794:807" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="1648:1656" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="3182:3197" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="3278:3296" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="3346:3359" ph="..." />
-            <marker date="1596589999608" expanded="true" signature="3409:3442" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardControler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="76" lean-forward="false" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
           <folding>
             <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <marker date="1596590050432" expanded="true" signature="104:122" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="134:143" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="796:809" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="1650:1658" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="3184:3199" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="3280:3298" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="3348:3361" ph="..." />
+            <marker date="1596590050432" expanded="true" signature="3411:3444" ph="..." />
           </folding>
         </state>
       </provider>
