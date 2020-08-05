@@ -7,11 +7,11 @@
     <tr>
     <!-- <td><img src="{{asset('assets/img/Logo_bnn2.png')}}" width="70" height="70"></td> -->
         <td><center>
-                <font size="4">Telkomsel Apprentice Program</font><BR>
+                <font size="4">Laporan</font><BR>
                 <font size="5"><b>Telkomsel Apprentice Program</b></font><BR>
-                <font size="2">Jalan KH.Ahmad Dahlan No.25, Mangkukusuman, Tegal Timur, Panggung, Kec. Tegal Timur</font><BR>
-                <font size="2">Kota Tegal, Jawa Tengah (0283) 451349</font><BR>
-                <font size="2">TEGAL<BR></font>
+                {{--<font size="2">Jalan KH.Ahmad Dahlan No.25, Mangkukusuman, Tegal Timur, Panggung, Kec. Tegal Timur</font><BR>--}}
+                {{--<font size="2">Kota Tegal, Jawa Tengah (0283) 451349</font><BR>--}}
+                {{--<font size="2">TEGAL<BR></font>--}}
             </center>
         </td>
     </tr>
@@ -65,7 +65,8 @@
     </tbody>
 </table>
 <table align=right border="0" cellpadding="1" style="width: 250px;">
-    {{--<tbody>--}}
+
+{{--<tbody>--}}
     {{--<tr>--}}
         {{--<td valign="top">--}}
 

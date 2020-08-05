@@ -129,14 +129,12 @@ class ProgramController extends Controller
         $data->tanggal_selesai_pengumpulan = Carbon::parse($request->tanggal_mulai_pengumpulan)->addMonths(1);
         $image = $request->file('gambar');
         if ($image== ''){
-            $data->gambar=$request->old_gambar;
+            $data->gambar = $request->old_gambar;
         }else{
-            $image = $request->file('gambar');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $filepath = 'admin/' . $filename;
-            Storage::disk('s3')->put($filepath, file_get_contents($image));
+            $data->gambar = Storage::disk('s3')->put($filepath, file_get_contents($image));
         }
-
         $data->update();
         return redirect()->route('program')->with('update','Berhasil Mengubah Data');
     }

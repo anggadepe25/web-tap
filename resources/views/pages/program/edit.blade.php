@@ -37,7 +37,7 @@
                                 <div class="form-group has-success">
                                     <label>Gambar</label>
                                     <input type="hidden" name="old_gambar" class="form-control"
-                                           value="{{$data->gambar}}"/>
+                                           value="{{ $data->gambar }}"/>
                                     <input type="file" name="gambar" onchange="loadfile(event)" id="foto"
                                            class="custom-file {{$errors->has('gambar')?'is-invalid':''}}"
                                            value="{{ old('gambar') }}"/>
