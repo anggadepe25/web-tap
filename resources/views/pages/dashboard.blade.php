@@ -24,7 +24,7 @@
                             <div class=" col-9">
                                 <h6 class="m-0 text-light">Users</h6>
                                 <p class="f12 mb-0">
-                                    {{ $users }}
+                                    {{ $totalUsers }}
                                 </p>
                             </div>
                         </div>
