@@ -18,7 +18,7 @@ class DashboardControler extends Controller
     {
         $users = User::all();
         $totalUsers = User::all()->count();
-        $point = Challenge::all()->max('point');
+        $point = User::all()->challenges->max('point');
         return view('pages.dashboard', compact('users', 'totalUsers','users', 'point'));
     }
 }
