@@ -24,7 +24,7 @@
                             <div class=" col-9">
                                 <h6 class="m-0 text-light">Users</h6>
                                 <p class="f12 mb-0">
-                                    32 New Users
+                                    {{ $users }}
                                 </p>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                             <div class=" col-9">
                                 <h6 class="m-0 text-light">Point</h6>
                                 <p class="f12 mb-0">
-                                    32 New Users
+                                    {{ $point }}
                                 </p>
                             </div>
                         </div>
