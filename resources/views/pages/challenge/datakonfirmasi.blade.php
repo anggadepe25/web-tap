@@ -16,7 +16,7 @@
                                 <div class="row d-flex align-items-center">
                                     <div class="col-md-6">
                                         <div class="card-title">
-                                            <h1>Data Konfirmasi</h1>
+                                            <h1>Data Tolak</h1>
                                         </div>
                                         <form action="{{ route('challenge.searchkonfirmasi') }}" method="get" class="row">
                                             <select name="month" class="form-control col-3 mr-2">
@@ -70,8 +70,10 @@
                                         <td><span class="badge badge-danger">{{$data->status}}</span></td>
                                     @endif
                                     <td>{{ $data->created_at->format('d-m-Y') }}</td>
-
                                 </tr>
+
+
+
                             @endforeach
                             </tbody>
                         </table>
