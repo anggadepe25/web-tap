@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21f1dfa5-e171-4717-9654-09341a1ec949" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_03_155927_create_programs_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_155927_create_programs_table.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -524,12 +523,12 @@
       <workItem from="1595224235567" duration="8329000" />
       <workItem from="1595370887622" duration="38740000" />
       <workItem from="1596078111127" duration="29287000" />
-      <workItem from="1600926982630" duration="1104000" />
+      <workItem from="1600926982630" duration="1922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282274000" />
+    <option name="totallyTimeSpent" value="283092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
